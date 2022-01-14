@@ -62,6 +62,7 @@
     transform: rotate(-15deg);
     display: flex;
     align-items: center;
+    background-color: #13054f;
     padding: 15px;
     margin-bottom: 20px;
     span {
