@@ -1,100 +1,63 @@
 <template>
   <div container>
-    <div main>
-      <div>
-        <p title v-text="name" />
-        <p v-text="description" />
-      </div>
-      <div linkscontainer>
-        <div v-for="(link, index) in links" v-bind:key="index">
-          <a :href="link.url" target="_blank" v-text="'+ '+link.label" />
-        </div>
-      </div>
-    </div>
-    <img landingimg src="./assets/kid.png" />
+    <img avatar src="./assets/kid.png" />
+    <p title>@webbendr</p>
+    <div button twitch >Twitch</div>
+    <div button youtube >Youtube</div>
+    <div button spotify >Spotify</div>
+    <div button instagram >Instagram</div>
   </div>
 </template>
-<script>
 
+<script>
   export default {
     name: 'App',
-    data: () => ({
-      url: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NjA4Mjc3NHx8ZW58MHx8fHw%3D&w=1000&q=80",
-      name: 'webbendr',
-      links: [
-        {
-          label: 'Tictok',
-          url: 'http://google.com',
-        },
-        {
-          label: 'SnapChat',
-          url: 'http://google.com'
-        },
-        {
-          label: 'instargram',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Twitter',
-          url: 'http://google.com',
-        },
-        {
-          label: 'SoundCloud',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Linkedin',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Discord',
-          url: 'http://google.com',
-        },
-        {
-          label: 'Telegram',
-          url: 'http://google.com',
-        },
-      ],
-      description: "Loren ipsum dolor set a met, consectetur adipising elit, sed to eiusmod tempor incididunt ut labore et dolore magnaaliqua.",
-  })
   }
 </script>
 
 <style lang="scss">
   body {
-    background: #ffff55;
-    color: #4900c2;
+    background: #20125d;
+    color: #fff;
     font-family: 'Courier New';
-    font-size: 12px;
+    font-size: 20px;
     margin: 0;
+    text-align: center;
   }
   [container] {
+    box-sizing: border-box;
     min-height: 100vh;
+    padding: 40px 20px;
   }
-  [main] {
-    padding: 2vh 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    max-height: 50vh;
-    height: 48vh;
-    a {
-      font-size: 26px;
-      font-weight: bold;
-    }
-  }
-  [linkscontainer] {
-    max-height: 25vh;
-    overflow-y: scroll;
+  [avatar] {
+    width: 6rem;
+    height: 6rem;
+    border: 4px solid #4900c2;
+    border-radius: 50%;
   }
   [title] {
-    font-size: 48px;
     font-weight: bold;
-    margin: 0;
+    margin: 10px auto 40px;
+    font-size: 30px;
   }
-  [landingimg] {
+  [button] {
     width: 100%;
-    height: 48vh;
-    background-color: #4900c2;
+    border: 3px solid;
+    border-radius: 50px;
+    transform: rotate(-15deg);
+    padding: 15px 0;
+    margin-bottom: 20px;
+  }
+  [twitch] {
+    border-color: #863dff;
+  }
+  [youtube] {
+    border-color: #df125d;
+  }
+  [spotify] {
+    border-color: #00f600;
+  }
+  [instagram] {
+    border-color: #fc00ff;
   }
 </style>
